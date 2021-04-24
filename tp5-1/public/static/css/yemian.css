@@ -1,0 +1,64 @@
+*{
+    margin:0 auto;
+    padding:0;
+}
+/*添加一个浅灰色背景*/
+body{
+    background-color:#eee;
+}
+
+.content{
+    /*border:1px solid red;*/
+    width:600px;
+    margin-top:50px;
+}
+
+.content h3 {
+    text-align: center;
+    width:300px;
+    margin-bottom:10px;
+}
+
+.content .panel{
+    border:1px solid #ccc;
+    /* border-radius:5px; */
+    /* height:220px; */
+    background-color:#fff;
+}
+
+.content .panel ul{
+    list-style: none;
+    margin-top:15px;
+}
+
+.content .panel ul li{
+    margin-top:30px;
+    margin-left: 15px;
+}
+
+.content .panel ul span{
+    margin-top:10px;
+    
+    margin-left: 15px;
+}
+
+.content .panel ul li input{
+    line-height:22px;
+    /* width:250px; */
+    font-size: 14px;
+    font-family: "微软雅黑","宋体";
+}
+.content .panel ul li label{
+    font-size: 14px;
+    font-family: "黑体","微软雅黑","宋体";
+    font-weight: bold;
+
+}
+
+.but{
+    background-color: rgb(13, 234, 241);
+    padding: 15px 40px;
+    border: none;
+    margin: 18px 227px;
+    cursor: pointer;
+}

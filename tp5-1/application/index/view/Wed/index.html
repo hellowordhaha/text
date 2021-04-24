@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>登录界面</title>
+        <link rel="stylesheet" type="text/css" href="__STATIC__/css/denlu.css"/>
+    </head>
+    <body>
+        <div class="content">
+            <h3>XX考试系统</h3>
+            <div class="panel">
+                <form action={:url('index/Wed/indexs')} method="post" class="group">
+                    <ul>
+                        <li><label>账号</label></li>
+                        <li><input name="zhhao" type="text" placeholder=" 请输入学号" /></li>
+                    </ul>
+                    <ul>
+                        <li><label>密码</label></li>
+                        <li><input name="mima" type="password" placeholder=" 请输入密码" /></li>
+                    </ul>
+                <input type="submit" value="登录" class="but"></input>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>

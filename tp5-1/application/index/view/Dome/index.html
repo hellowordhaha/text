@@ -1,0 +1,89 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>试卷列表</title>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/css/ht.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/css/ht2.css"/>
+    <script type="text/javascript" src="__STATIC__/js/ht.js"></script>
+</head>
+<body>
+
+    {include file="public/tou" /}
+<div class="container clearfix">
+    
+    {include file="public/tou-2" /}
+
+    <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a>
+                <span class="crumb-step">&gt;</span><span class="crumb-name">后台管理</span></div>
+        </div>
+        <div class="search-wrap">
+            <div class="search-content">
+                <form action="#" method="post">
+                    <table class="search-tab">
+                        <tr>
+                            <th width="120">选择分类:</th>
+                            <td>
+                                <select name="search-sort" id="">
+                                    <option value="">全部</option>
+                                    <option value="19">精品界面</option><option value="20">推荐界面</option>
+                                </select>
+                            </td>
+                            
+                            <td><input class="btn btn-primary btn2" name="sub" value="查询" type="submit"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                <div class="result-title">
+                    <div class="result-list">
+                        <a href={:url('index/Dome/index_index')}><i class="icon-font"></i>添加试卷</a>
+                        <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
+                    </div>
+                </div>
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox">全选</th>
+                            <th>试卷名称</th>
+                            <th>考试开始时间</th>
+                            <th>考试结束时间</th>
+                            <th>考试状态</th>
+                            <th>题目数量</th>
+                            <th>题分值</th>
+                            <th>操作</th>
+                        </tr>
+
+                        {volist name = "name" id = "v"}
+                        <tr>
+                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
+                            <td>{$v.test_name}</td>
+                            <td>{$v.create_time}</td>
+                            <td>{$v.end_time}</td>
+                            <td>{$v.status}</td>
+                            <td>{$v.test_num}</td>
+                            <td>{$v.score}</td>
+                            <td>
+                                <a class="link-update" href={:url('index/Dome/index_x_index')}?id={$v.id}>修改</a>
+                                <a class="link-del" href={:url('index/Dome/index_del')}?id={$v.id}>删除</a>
+                            </td>
+                        </tr>
+                        {/volist}
+                    </table>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    
+</div>
+</body>
+</html>

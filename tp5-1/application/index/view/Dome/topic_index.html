@@ -1,0 +1,108 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>添加单选题页面</title>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/css/ht.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/css/ht2.css"/>
+    <script type="text/javascript" src="__STATIC__/js/ht.js"></script>
+</head>
+<body>
+
+    {include file="public/tou" /}
+
+<div class="container clearfix">
+   
+    {include file="public/tou-2" /}
+
+    <div class="main-wrap" id="main">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a>
+                <span class="crumb-step">&gt;</span><span class="crumb-name">后台管理</span></div>
+        </div>
+        <div class="search-wrap">
+            <div class="search-content">
+                <form action="#" method="post">
+                    <table class="search-tab">
+                        <tr>
+                            <th width="120">选择分类:</th>
+                            <td>
+                                <select name="search-sort" id="">
+                                    <option value="">全部</option>
+                                    <option value="19">精品界面</option><option value="20">推荐界面</option>
+                                </select>
+                            </td>
+                            
+                            <td><input class="btn btn-primary btn2" name="sub" value="查询" type="submit"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        
+
+        
+
+    <div class="result-wrap main-wrap2">
+        <form action={:url('index/Dome/topic_index_t')} method="post" id="myform" name="myform">
+            <div class="config-items">
+                <div class="result-content">
+                    <h1><i class="icon-font">&#xe014;</i>添加单选题</h1>
+                    <table width="100%" class="insert-tab">
+                        <tr>
+                            <th width="15%"><i class="require-red">*</i>试卷关联ID：</th>
+                            <td><input type="text" id="" value="XXX" size="85" name="i_id" class="common-text"></td>
+                        </tr>
+                        <tr>
+                            <th width="15%"><i class="require-red">*</i>题号：</th>
+                            <td><input type="text" id="" value="XXX" size="85" name="tihao" class="common-text"></td>
+                        </tr>
+                        <tr>
+                            <th><i class="require-red">*</i>问题内容：</th>
+                            <td><input type="text" id="" value="XX" size="85" name="text" class="common-text"></td>
+                        </tr>
+                        <tr>
+                            <th><i class="require-red">*</i>A选项答案内容：</th>
+                            <td><input type="text" id="" value="XX" size="85" name="text_a" class="common-text"></td>
+                        </tr>
+                        <tr>
+                            <th><i class="require-red">*</i>B选项答案内容：</th>
+                            <td><input type="text" id="" value="XX" size="85" name="text_b" class="common-text"></td>
+                        </tr>
+                        <tr>
+                            <th><i class="require-red">*</i>C选项答案内容：</th>
+                            <td><input type="text" id="" value="XX" size="85" name="text_c" class="common-text"></td>
+                        </tr>
+                        <tr>
+                                <th><i class="require-red">*</i>D选项答案内容：</th>
+                                <td><input type="text" id="" value="XX" size="85" name="text_d" class="common-text"></td>
+                        </tr>
+                        <tr>
+                                <th><i class="require-red">*</i>正确答案选项：</th>
+                                <td><input type="text" id="" value="XX" size="85" name="text_zh" class="common-text"></td>
+                        </tr>
+                        
+                            
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input type="hidden" value="siteConf.inc.php" name="file">
+                                    <input type="submit" value="提交" class="btn btn-primary btn6 mr10">
+                                    <input type="button" value="返回" onclick="history.go(-1)" class="btn btn6">
+                                </td>
+                            </tr>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+  
+    
+    
+    
+</div>
+</body>
+</html>

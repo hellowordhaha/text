@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>试卷考试页面</title>
+        <link rel="stylesheet" type="text/css" href="__STATIC__/css/ti.css"/>
+    </head>
+    <body>
+        <div class="content">
+            <h3>考试页面</h3>
+            <div class="panel">
+                <form action={:url('index/Wed/fen')}?id={$id} method="post" class="group" id="fm">
+                    {volist name = "data" id = "v"}
+                        <ul>
+                        <span>{$v.sort}题</span>&nbsp;&nbsp;
+                        <span>:{$v.test_content}。</span>
+                        <li><input type="radio" name="{$v.sort}" value="A">&nbsp;A: {$v.option_a}</li> 
+                        <li><input type="radio" name="{$v.sort}" value="B">&nbsp;B: {$v.option_b}</li> 
+                        <li><input type="radio" name="{$v.sort}" value="C">&nbsp;C: {$v.option_c}</li> 
+                        <li><input type="radio" name="{$v.sort}" value="D">&nbsp;D: {$v.option_d}</li>   
+                        </ul>
+                    {/volist}
+
+                    
+                    
+                <input type="submit" value="提交试卷" class="but" ></input>
+            </form>
+            </div>
+        </div>
+    </body>
+    
+</html>

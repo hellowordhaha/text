@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>试卷列表</title>
+        <link rel="stylesheet" type="text/css" href="__STATIC__/css/yemian.css"/>
+        <script src="__STATIC__/js/vue.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <h3>XX考试试卷列表</h3>
+            <div class="panel">
+                <form action={:url('index/Wed/ym_t')} method="post" class="group" id="fm">
+                    <ul>
+                        {volist name = "data" id = "v"}
+                        <li><input type="radio" name="ti" value="{$v.test_name}">&nbsp; {$v.test_name}
+                            <span>共 {$v.test_num} 道题 &nbsp;&nbsp;&nbsp; &nbsp;每道{$v.score}分</span></li> 
+                            <span>考试开始时间:{$v.create_time}</span>&nbsp;&nbsp;
+                            <span>考试结束时间:{$v.end_time}</span>
+                        {/volist}
+
+                    </ul>
+                    
+                <input type="submit" value="开始考试" class="but" onclick="fuc()"></input>
+            </form>
+            </div>
+        </div>
+    </body>
+    <script src="__STATIC__/js/jquery.js"></script>
+    <script>
+        function fuc(){
+            if ($(":radio[name='ti']:checked").size()) {
+                
+            }else{
+                $('form[id=fm]').attr('action','###');
+                alert('请选择试卷');
+
+            }
+        }
+    
+    
+    
+    
+    </script>
+</html>

@@ -1,0 +1,33 @@
+*{
+    margin:0 auto;
+    padding:0;
+}
+/*添加一个浅灰色背景*/
+body{
+    background-color:#eee;
+}
+
+.content{
+    /*border:1px solid red;*/
+    width:600px;
+    margin-top:50px;
+}
+
+.content h3 {
+    text-align: center;
+    width:300px;
+    margin-bottom:10px;
+}
+
+.content .panel{
+    border:1px solid #ccc;
+    /* border-radius:5px; */
+    /* height:220px; */
+    background-color:#fff;
+}
+.content .panel h1{
+    color: red;
+    text-align:center; 
+    font-size: 50px;
+}
+
